@@ -1,0 +1,178 @@
+* {
+  /* box-sizing: border-box; */
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* * Animação de fundo * */
+#starfield {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Fica atrás do conteúdo */
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #090b0c;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0; 
+  padding: 0; 
+}
+
+body {
+  display: flex;          
+  flex-direction: column; 
+  min-height: 100vh;      
+
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+main { 
+  flex-grow: 1; 
+}
+
+/* * Logo do Iniciando.dev * */
+#Logo_principal {
+  width: 37.5em;
+  margin: auto;
+  margin-top: 17.8vh;
+  margin-bottom: 5.9vh;
+  display: flex;
+  align-items: center;
+}
+
+/* * Texto falando em breve * */
+
+header{
+  text-align: center;
+}
+h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+  display: inline-block;
+  
+}
+
+/* * Imagem animada* */
+#animated_text > img {
+  width: 30px;
+  margin-bottom: 30px;
+}
+
+#animated_text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+  margin: auto;
+  gap: 10px;
+}
+
+
+/* * Texto avisando * */
+
+#content_adviser p {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+#content_adviser > p {
+  text-align: center;
+  margin: auto;
+}
+
+
+/* * SEÇÃO DE LINKS * */
+#content_links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 2rem;
+
+
+  max-width: 400px;
+  margin: auto;
+}
+
+/* * Logos com os links* */
+#content_links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px; /* largura do quadrado */
+  height: 80px; /* altura do quadrado */
+  padding: 1rem;
+  border-radius: 0.75rem;
+
+  background-color: rgba(255, 255, 255, 0.055); 
+  border: 1px solid rgba(255, 255, 255, 0); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+  backdrop-filter: blur(5px);
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 0 transparent;
+  overflow: hidden;
+}
+
+#content_links a > img {
+  filter: grayscale(1);
+}
+
+/* Github logo */
+#content_links > #github_link > img {
+  filter: invert(1);
+}
+
+/* Twitter logo */
+#content_links > #twitter_link > img {
+  filter: invert(1);
+}
+
+#content_links a:hover {
+  transform: scale(1.30);
+  box-shadow: 0 0 20px rgba(226, 213, 213, 0.342);
+  background-color: rgba(255, 255, 255, 0.062);
+  border-color: rgba(255, 255, 255, 0.185);
+
+}
+
+#content_links a:hover img {
+  filter: grayscale(0);
+}
+
+#content_links img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+/* * RODAPÉ * */
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 20px 0;
+  font-size: 15px;
+  margin-top: auto;
+  margin-bottom: 0;
+  margin: 0;
+  padding: 0;
+}
+
+footer > p {
+  padding: 0;
+}
