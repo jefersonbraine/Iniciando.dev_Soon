@@ -43,7 +43,7 @@ class Star {
       this.counter = canvasWidth;
 
       this.x = getRandomInt(-centerX, centerX);
-      this.x = getRandomInt(-centerY, centerY);
+      this.y = getRandomInt(-centerY, centerY);
 
       this.radiusMax = getRandomInt(0.1, 7);
       this.speed = getRandomInt(1, 10);
@@ -82,6 +82,8 @@ function draw() {
 
   mainContext.translate(centerX, centerY);
 
+    mainContext.beginPath();
+
   for (let i = 0; i < stars.length; i++) {
     let star = stars[i];
     star.drawStar();
@@ -91,7 +93,7 @@ function draw() {
 
   requestAnimationFrame(draw);
   /*
-TODO 
+TODO
 
     *ADD Delta Time for fixing the frame rate
 */
