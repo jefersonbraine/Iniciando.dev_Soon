@@ -82,7 +82,7 @@ function draw() {
 
   mainContext.translate(centerX, centerY);
 
-    mainContext.beginPath();
+  mainContext.beginPath();
 
   for (let i = 0; i < stars.length; i++) {
     let star = stars[i];

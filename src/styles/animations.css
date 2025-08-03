@@ -1,38 +1,44 @@
-
-
 /** Animação de carregando **/
 
 .loadTitle {
-    animation: pulseText 2s infinite alternate;
+  animation: pulseText 2s infinite alternate;
 }
 
-@keyframes pulseText{
-    0% { opacity: 0.4;}
-    100% { opacity: 1;}
+@keyframes pulseText {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-.dot{
-    display: inline-block;
+.dot {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeDots 1.5s infinite;
+}
+
+.dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 1s;
+}
+
+@keyframes fadeDots {
+  0% {
     opacity: 0;
-    animation: fadeDots 1.5s infinite;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
-
-.dot:nth-child(1){
-    animation-delay: 0s;
-}
-
-.dot:nth-child(2){
-    animation-delay: 0.5s;
-}
-
-.dot:nth-child(3){
-    animation-delay: 1.0s;
-}
-
-@keyframes fadeDots{
-    0% { opacity: 0;}
-    50% { opacity: 1;}
-    100% { opacity: 0;}
-}
-
-
